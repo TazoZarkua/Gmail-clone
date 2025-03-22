@@ -151,6 +151,9 @@ aside{
     padding-left: 2%;
     padding-right: 2%;
 }
+
+
+
 .checkbox{
     display: flex;
     gap: 5px;
@@ -207,9 +210,9 @@ input[type="checkbox"]{
     background-color: rgb(195, 231, 255);
 }
 .router-section-select{
-    
     display: flex;
     padding-right: 25%;
+    border-bottom: 1.3px solid rgb(226, 232, 240);
 }
 .section-select{
     width: 100%;
@@ -234,4 +237,62 @@ input[type="checkbox"]{
 .section-select img{
     width: 30px;
     height: 30px;
+}
+.message-line{
+    display: flex;
+    cursor: pointer;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid rgb(226, 232, 240);
+    transition: box-shadow 0.10s ease;
+    background-color: rgb(242, 245, 252);
+}
+.message-line:hover{
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.20);
+}
+.left-message-line{
+    display: flex;
+    align-items: center;
+    width: 25%;
+    gap: 15px;
+    padding-left: 1%;
+    font-size: 19px;
+    font-weight: 500;
+}
+.left-message-line img{
+    width: 25px;
+}
+.middle-message-line{
+    display: flex;
+    width: 100%;
+}
+
+.message-theme{
+    font-weight: 500;
+    font-size: 19px;
+    width: 15%;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.message{
+    width: 80%;
+}
+#message{
+    line-clamp: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    font-size: 17px;
+    padding-top: 0.5%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+}
+.right-message-line{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 2%;
 }
