@@ -64,4 +64,6 @@ searchedHTML += `
     })
 }
 document.querySelector('.chat-inbox').innerHTML = searchedHTML;
-} )
+} );
+
+document.querySelector('#message-count').innerHTML = messages.length;
