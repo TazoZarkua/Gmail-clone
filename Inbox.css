@@ -3,6 +3,10 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 box-sizing: border-box;
 margin: unset;
 }
+img{
+    cursor: pointer;
+}
+
 body{
     background-color: rgb(249, 250, 254);
 }
@@ -129,4 +133,105 @@ aside{
 }
 .nested-icon-container:hover{
     background-color: rgb(195, 231, 255);
+}
+.message-section{
+    width: 90%;
+    justify-self: center;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+.inbox-header{
+    padding: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.checkbox{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-radius: 100%;
+    transition: background-color 0.20s ease;
+}
+ .header-container:hover{
+    background-color: rgb(195, 231, 255);
+}
+input[type="checkbox"]{
+    appearance: none;
+    border: 2px solid gray;
+    width: 16px;
+    height: 16px;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.05);
+}
+.left-side{
+    display: flex;
+    gap: 10px;
+}
+.header-container{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: background-color 0.20s ease;
+}
+.header-container img{
+    width: 25px;
+    height: 25px;
+}
+.right-side{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 20%;
+    justify-content: space-between;
+}
+.header-container-number{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    transition: background-color 0.20s ease;
+    cursor: pointer;
+}
+.header-container-number:hover{
+    background-color: rgb(195, 231, 255);
+}
+.router-section-select{
+    
+    display: flex;
+    padding-right: 25%;
+}
+.section-select{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 1%;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(129, 138, 135);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+.section-select:hover{
+    background-color: rgb(244, 244, 244);
+}
+.section-select-inbox{
+    border-bottom: 3px solid rgb(16, 86, 201);
+    color: rgb(16, 86, 201) !important;
+}
+.section-select img{
+    width: 30px;
+    height: 30px;
 }
