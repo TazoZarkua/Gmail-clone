@@ -258,6 +258,18 @@ input[type="checkbox"]{
     border-bottom: 3px solid rgb(16, 86, 201);
     color: rgb(16, 86, 201) !important;
 }
+#scr2-blue{
+    display: none;
+}
+#scr1-blue{
+    display: none;
+}
+#scr3_blue{
+    display: none;
+}
+#src4_blue{
+    display: none;
+}
 .section-select img{
     width: 30px;
     height: 30px;
