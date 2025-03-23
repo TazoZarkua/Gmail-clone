@@ -67,3 +67,16 @@ document.querySelector('.chat-inbox').innerHTML = searchedHTML;
 } );
 
 document.querySelector('#message-count').innerHTML = messages.length;
+
+let btn = document.querySelectorAll('.section-select');
+
+btn.forEach((button) => {
+    button.addEventListener('click', () => {
+        if(button.classList.contains('section-select-inbox')){
+            button.classList.remove('section-select-inbox')
+        }
+        else{
+            button.classList.add('section-select-inbox')
+        }
+    })
+})
