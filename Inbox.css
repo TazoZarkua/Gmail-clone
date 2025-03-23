@@ -61,6 +61,10 @@ nav{
     right: 0;
     margin-right: 15px;
 }
+.baseline-icons{
+    display: none;
+    flex-direction: column;
+}
 aside{
     position: fixed;
     left: 0;
@@ -167,12 +171,19 @@ aside{
     background-color: rgb(195, 231, 255);
 }
 input[type="checkbox"]{
-    appearance: none;
     border: 2px solid gray;
     width: 16px;
     height: 16px;
     box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.05);
 }
+.on-show-icons{
+    display: none;
+    flex-direction: column;
+}
+#arrow-up{
+    display: none;
+}
+
 .left-side{
     display: flex;
     gap: 10px;
@@ -184,9 +195,22 @@ input[type="checkbox"]{
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    transition: background-color 0.20s ease;
+    transition: background-color 0.20s ease;   
 }
 .header-container img{
+    width: 25px;
+    height: 25px;
+}
+.header-container-2{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: background-color 0.20s ease;   
+}
+.header-container-2 img{
     width: 25px;
     height: 25px;
 }
@@ -245,7 +269,7 @@ input[type="checkbox"]{
     align-items: center;
     border-bottom: 1px solid rgb(226, 232, 240);
     transition: box-shadow 0.10s ease;
-    background-color: rgb(242, 245, 252);
+    background-color: white;
 }
 .message-line:hover{
     box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.20);
@@ -295,4 +319,62 @@ input[type="checkbox"]{
     align-items: center;
     justify-content: end;
     padding-right: 2%;
+}
+
+.message-status{
+    position: absolute;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    top: 140px;
+    border-radius: 3px;
+    display: none;
+}
+
+.message-status ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 0;
+    font-weight: 400;
+}
+.message-status ul li{
+    list-style: none;
+    display: flex;
+    padding-left: 30%;
+    height: 35px;
+    align-items: center;
+    text-align: start;
+    cursor: pointer;
+    width: 100%;
+}
+.message-status ul li:hover{
+    background-color: rgb(223, 213, 213);
+}
+.left-side-backup{
+    display: none;
+    align-items: center;
+    gap: 10%;
+    margin-left: 5%;
+}
+.left-backup{
+    display: flex;
+    gap: 30px;
+    padding-top: 8px;
+    padding-right: 10%;
+    border-right: 2px solid rgb(188, 181, 181);
+}
+.left-backup img{
+    width: 25px;
+}
+.right-backup{
+    display: flex;
+    gap: 30px;
+    padding-top: 8px;
+}
+.right-backup img{
+    width: 25px;
 }

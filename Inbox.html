@@ -91,8 +91,49 @@
                 <div class="nested-icon-container">
                     <img src="sidebar-icons/drafts.png">
                 </div>
-                <div class="nested-icon-container">
-                    <img src="sidebar-icons/expand more.png">
+                <div class="nested-icon-container" id="expand-more">
+                    <img id="arrow-down" src="sidebar-icons/expand more.png">
+                    <img id="arrow-up" src="sidebar-icons/arrow-up.png">
+                </div>
+                <div class="on-show-icons">
+                    <div class="nested-icon-container">
+                        <img src="sidebar-icons/important.png">
+                    </div>
+                    <div class="nested-icon-container">
+                        <img src="sidebar-icons/chat.png">
+                    </div>
+                    <div class="nested-icon-container">
+                        <img src="sidebar-icons/schedule.png">
+                    </div>
+                    <div class="nested-icon-container">
+                        <img src="sidebar-icons/stacked.png">
+                    </div>
+                    <div class="nested-icon-container">
+                        <img src="images/report_baseline_nv700_20dp.png">
+                    </div>
+                    <div class="nested-icon-container">
+                        <img src="images/delete_baseline_nv700_20dp.png">
+                    </div>
+                    <div class="nested-icon-container">
+                        <img id="showBaseline" src="sidebar-icons/label_baseline_nv700_20dp.png">
+                    </div>
+                    <div class="baseline-icons">
+                        <div class="nested-icon-container">
+                            <img src="sidebar-icons/groups.png">
+                        </div>
+                        <div class="nested-icon-container">
+                            <img src="sidebar-icons/warning.png">
+                        </div>
+                        <div class="nested-icon-container">
+                            <img src="sidebar-icons/forum_baseline_nv700_20dp.png">
+                        </div>
+                        <div class="nested-icon-container">
+                            <img src="sidebar-icons/sell_baseline_nv700_20dp.png">
+                        </div>
+                        <div class="nested-icon-container">
+                            <img src="sidebar-icons/settings_baseline_nv700_20dp.png">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="nested-icon-container">
@@ -105,25 +146,48 @@
             <div class="left-side">
                 <div class="checkbox">
                     <input id="checkbox" type="checkbox">
-                    <img src="images/inbox-header/arrow drop.png">
+                    <img id="js-checkbox" src="images/inbox-header/arrow drop.png">
+                </div>
+                <div class="message-status">
+                    <ul>
+                        <li>All</li>
+                        <li>None</li>
+                        <li>Read</li>
+                        <li>Unread</li>
+                        <li>Starred</li>
+                        <li>Unstarred</li>
+                    </ul>
                 </div>
                 <div class="header-container">
                     <img id="refresh" src="images/inbox-header/refresh.png">
                 </div>
-                <div class="header-container">
+                <div class="header-container-2">
                     <img src="images/inbox-header/more.png">
+                </div>
+                <div class="left-side-backup">
+                    <div class="left-backup">
+                        <div><img src="images/archive_baseline_nv700_20dp.png"></div>
+                        <div><img src="images/report_baseline_nv700_20dp.png"></div>
+                        <div><img src="images/delete_baseline_nv700_20dp.png"></div>
+                    </div>
+                    <Div class="right-backup">
+                        <div><img src="images/drafts_baseline_nv700_20dp.png"></div>
+                        <div><img src="images/drive_file_move_outline_baseline_nv700_20dp.png"></div>
+                        <div><img src="images/inbox-header/more.png"></div>
+                    </Div>
                 </div>
             </div>
             <div class="right-side">
                 <div class="header-container-number">
-                    <p style="font-weight: 500; font-size: 18px; color: rgb(129, 138, 135);">1-50 of <span id="message-count"></span></p>
+                    <p style="font-weight: 500; font-size: 18px; color: rgb(129, 138, 135);">1-50 of <span
+                            id="message-count"></span></p>
                 </div>
                 <div class="prev-next" style="display: flex; margin-top: 2px; gap: 10px;">
                     <div class="header-container">
-                        <img  src="images/inbox-header/prev.png">
+                        <img src="images/inbox-header/prev.png">
                     </div>
                     <div class="header-container">
-                        <img  src="images/inbox-header/next.png">
+                        <img src="images/inbox-header/next.png">
                     </div>
                 </div>
                 <div>
@@ -153,7 +217,7 @@
         <div class="chat-inbox">
             <div class="message-line">
                 <div class="left-message-line">
-                    <input type="checkbox">
+                    <input type="checkbox" id="checkbox">
                     <img src="sidebar-icons/starred.png">
                     <p>Reddit</p>
                 </div>
@@ -162,7 +226,9 @@
                         <P>New message from u/welcomebot -</P>
                     </div>
                     <div class="message">
-                        <p id="message">Welcome to r/Doppleganger! Before you get started, please be sure to read the rules of the community. Keep in mind that we do not allow anything NSFW as we have users ages 13+. NSFW users may use a se...</p>
+                        <p id="message">Welcome to r/Doppleganger! Before you get started, please be sure to read the
+                            rules of the community. Keep in mind that we do not allow anything NSFW as we have users
+                            ages 13+. NSFW users may use a se...</p>
                     </div>
                 </div>
                 <div class="right-message-line">

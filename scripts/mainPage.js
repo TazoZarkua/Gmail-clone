@@ -43,7 +43,7 @@ searchedHTML += `
 
             <div class="message-line">
                 <div class="left-message-line">
-                    <input type="checkbox">
+                    <input type="checkbox" id="IndividualCheckbox">
                     <img src="sidebar-icons/starred.png">
                     <p>${message.author}</p>
                 </div>
@@ -68,15 +68,73 @@ document.querySelector('.chat-inbox').innerHTML = searchedHTML;
 
 document.querySelector('#message-count').innerHTML = messages.length;
 
-let btn = document.querySelectorAll('.section-select');
 
-btn.forEach((button) => {
-    button.addEventListener('click', () => {
-        if(button.classList.contains('section-select-inbox')){
-            button.classList.remove('section-select-inbox')
-        }
-        else{
-            button.classList.add('section-select-inbox')
-        }
-    })
+
+const checkbox = document.getElementById('js-checkbox');
+
+checkbox.addEventListener('click', () => {
+   let messagebox = document.querySelector('.message-status');
+       if(messagebox.style.display === 'flex'){
+            messagebox.style.display = 'none'
+       }
+       else{
+        messagebox.style.display = 'flex';
+       }
+ 
+});
+
+document.getElementById('checkbox').addEventListener('click', () => {
+   const header_container = document.querySelector('.header-container');
+   const header_container_2 = document.querySelector('.header-container-2');
+   const left_side_backup = document.querySelector('.left-side-backup');
+   const line = document.querySelectorAll('.message-line')
+if(header_container.style.display === 'none' && header_container_2.style.display === 'none' && left_side_backup.style.display === 'flex'){
+    header_container.style.display = 'flex';
+    header_container_2.style.display = 'flex'
+    left_side_backup.style.display = 'none';
+    line.forEach((lin) => {
+        lin.style.backgroundColor = 'white'
+    });
+
+}
+else{
+    header_container.style.display = 'none';
+    header_container_2.style.display = 'none'
+    left_side_backup.style.display = 'flex';
+    line.forEach((lin) => {
+        lin.style.backgroundColor = 'rgb(195, 219, 255)'
+    });
+   let check = document.querySelector('#checkbox');
+   let IndividualCheckbox = document.querySelectorAll('#IndividualCheckbox')   
+}
+});
+
+
+const ExpandMore = document.getElementById('expand-more');
+ExpandMore.addEventListener('click', () => {
+   const sidebar =  document.querySelector('.on-show-icons');
+   const arrow_down = document.getElementById('arrow-down');
+   const arrow_up = document.getElementById('arrow-up')
+   if(sidebar.style.display === 'flex'){
+    sidebar.style.display = 'none';
+    arrow_up.style.display = 'none';
+    arrow_down.style.display = 'flex';
+   }
+   else{
+    sidebar.style.display = 'flex';
+    arrow_up.style.display = 'flex';
+    arrow_down.style.display = 'none'
+   }
 })
+
+const icon = document.getElementById('showBaseline');
+icon.addEventListener('click', () => {
+    const baseline = document.querySelector('.baseline-icons');
+    if(baseline.style.display === 'flex'){
+        baseline.style.display = 'none'
+    }
+    else{
+        baseline.style.display = 'flex'
+    }
+})
+
