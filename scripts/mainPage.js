@@ -1,5 +1,7 @@
 import { messages } from "./messages.js";
-
+import { promoMessage } from "./promo-messages.js";
+import { socialMessages } from "./socialMessages.js";
+import { updates } from "./updates.js";
 
 let messageHTML = '';
 
@@ -165,9 +167,12 @@ section_select_1.addEventListener('click', () => {
     scr1_blue.style.display = 'none';
     src4.style.display = 'flex';
     src4_blue.style.display = 'none';
+    document.querySelector('.chat-inbox').innerHTML = messageHTML;
 });
 
 section_select_2.addEventListener('click', () => {
+    document.querySelector('.chat-inbox').innerHTML = '';
+    let promotionsHTML = '';
     if(section_select_1.classList.contains('section-select-inbox') || section_select_3.classList.contains('section-select-inbox') || section_select_4.classList.contains('section-select-inbox')){
         section_select_1.classList.remove('section-select-inbox');
         section_select_3.classList.remove('section-select-inbox');
@@ -183,9 +188,35 @@ section_select_2.addEventListener('click', () => {
     scr3_blue.style.display = 'none';
     src4.style.display = 'flex';
     src4_blue.style.display = 'none';
+    promoMessage.forEach((message) => {
+        promotionsHTML += `
+                    <div class="message-line">
+                <div class="left-message-line">
+                    <input type="checkbox" id="IndividualCheckbox">
+                    <img src="sidebar-icons/starred.png">
+                    <p>${message.author}</p>
+                </div>
+                <div class="middle-message-line">
+                    <div class="message-theme">
+                        <P>${message.theme}</P>
+                    </div>
+                    <div class="message">
+                        <p id="message">${message.message}</p>
+                    </div>
+                </div>
+                <div class="right-message-line">
+                    <p>${message.time}</p>
+                </div>
+            </div>
+        `
+    });
+    document.querySelector('.chat-inbox').innerHTML = promotionsHTML;
+
 });
 
 section_select_3.addEventListener('click', () => {
+    document.querySelector('.chat-inbox').innerHTML = '';
+    let socialHTML = '';
     if(section_select_1.classList.contains('section-select-inbox') || section_select_2.classList.contains('section-select-inbox') || section_select_4.classList.contains('section-select-inbox')){
         section_select_1.classList.remove('section-select-inbox');
         section_select_2.classList.remove('section-select-inbox');
@@ -200,9 +231,34 @@ section_select_3.addEventListener('click', () => {
     scr3_blue.style.display = 'flex';
         src4.style.display = 'flex';
     src4_blue.style.display = 'none';
+    socialMessages.forEach((message) => {
+   socialHTML += `
+                     <div class="message-line">
+                <div class="left-message-line">
+                    <input type="checkbox" id="IndividualCheckbox">
+                    <img src="sidebar-icons/starred.png">
+                    <p>${message.author}</p>
+                </div>
+                <div class="middle-message-line">
+                    <div class="message-theme">
+                        <P>${message.theme}</P>
+                    </div>
+                    <div class="message">
+                        <p id="message">${message.message}</p>
+                    </div>
+                </div>
+                <div class="right-message-line">
+                    <p>${message.time}</p>
+                </div>
+            </div>
+   `
+    })
+    document.querySelector('.chat-inbox').innerHTML = socialHTML;
 });
 
 section_select_4.addEventListener('click', () => {
+    document.querySelector('.chat-inbox').innerHTML = '';
+    let updateHTML = '';
     if(section_select_1.classList.contains('section-select-inbox') || section_select_2.classList.contains('section-select-inbox') || section_select_3.classList.contains('section-select-inbox')){
         section_select_1.classList.remove('section-select-inbox');
         section_select_2.classList.remove('section-select-inbox');
@@ -216,5 +272,28 @@ section_select_4.addEventListener('click', () => {
     scr3.style.display = 'flex';
     scr3_blue.style.display = 'none';
     src4.style.display = 'none';
-    src4_blue.style.display = 'flex'
+    src4_blue.style.display = 'flex';
+    updates.forEach((message) => {
+     updateHTML += `
+                          <div class="message-line">
+                <div class="left-message-line">
+                    <input type="checkbox" id="IndividualCheckbox">
+                    <img src="sidebar-icons/starred.png">
+                    <p>${message.author}</p>
+                </div>
+                <div class="middle-message-line">
+                    <div class="message-theme">
+                        <P>${message.theme}</P>
+                    </div>
+                    <div class="message">
+                        <p id="message">${message.message}</p>
+                    </div>
+                </div>
+                <div class="right-message-line">
+                    <p>${message.time}</p>
+                </div>
+            </div>
+     `
+    });
+    document.querySelector('.chat-inbox').innerHTML = updateHTML;
 });

@@ -1,6 +1,6 @@
 export const promoMessage = [
     {
-        author: 'SAMSUNG ELECTRONICS',
+        author: 'SAMSUNG',
         theme: 'ეს არ არის სპოილერი, აუცილებლად მოგეწონება',
         message: 'შეიძინე უახლესი Galaxy ფლაგმანი და მიიღე მაგთის 5G ულიმიტო ინტერნეტი, 6 თვით',
         time: 'Mar 20'
